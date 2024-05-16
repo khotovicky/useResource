@@ -1,0 +1,35 @@
+{
+  "name": "use-resource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "16",
+    "react": "^18.0.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs && node ./scripts/copyFiles.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "commonjs",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rollup-preserve-directives": "^1.1.1",
+    "tslib": "^2.6.2"
+  }
+}

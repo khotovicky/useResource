@@ -4,9 +4,8 @@ export function useResource<T>(callback: () => Promise<T>) {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<T>();
   const [error, setError] = useState();
-  const mutate = (mutateData: (data: T) => T) => {
-    const newData = mutateData(data);
-    setData(newData);
+  const mutate = (mutateData: (data?: T) => T) => {
+    setData(mutateData);
   };
   callback()
     .then((data) => {
